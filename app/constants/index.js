@@ -1,0 +1,9 @@
+export const userToken = 'jwtToken';
+export const imageDefault = 'https://static.productionready.io/images/smiley-cyrus.jpg';
+export const textDefault = '--';
+export const urlApi = 'https://conduit.productionready.io/api/';
+export const urlApiArticles = 'https://conduit.productionready.io/api/articles';
+export const urlApiTags = 'https://conduit.productionready.io/api/tags/';
+export const urlProfiles = 'https://conduit.productionready.io/api/profiles/';
+export const urlUser = 'https://conduit.productionready.io/api/user/';
+export const urlUsers = 'https://conduit.productionready.io/api/users/';
