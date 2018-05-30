@@ -9,6 +9,11 @@ import { imageDefault } from './constants';
 //   return el;
 // }
 
+export const parseJwt = (token) => {
+  const base64 = token.split('.')[1].replace('-', '+').replace('_', '/');
+  return JSON.parse(window.atob(base64));
+};
+
 export const getItem = (tokenKey) => window
   && window.localStorage
   && window.localStorage.getItem(tokenKey);

@@ -8,7 +8,7 @@ import React from 'react';
 // import styled from 'styled-components';
 import PropTypes from 'prop-types';
 // import { FormattedMessage } from 'react-intl';
-import { checkErrorImage, getItem } from 'utils/helpers';
+import { checkErrorImage, getItem, parseJwt } from 'utils/helpers';
 import { NavLink } from 'react-router-dom';
 import { userToken } from 'constants/index';
 // import messages from './messages';
@@ -63,7 +63,7 @@ function Navbar(props) {
       link: `/@${user.username}`,
       exact: false,
       avatar: user.image,
-      label: user.username,
+      label: parseJwt(checkToken).username,
     },
   ];
 
