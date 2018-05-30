@@ -16,8 +16,8 @@ import NavbarWrapper from './NavbarWrapper';
 function Navbar(props) {
   const { user } = props;
   const checkToken = getItem(userToken);
-  let menuList =[];
-  if(!checkToken) {
+  let menuList = [];
+  if (!checkToken) {
     menuList = [
       {
         key: 'home',
@@ -71,28 +71,27 @@ function Navbar(props) {
   return (
     <NavbarWrapper className="nav navbar-nav pull-xs-right">
       {menuList && menuList.map((item) => (
-          <li key={item.key} className="nav-item">
-            <NavLink
-              to={item.link}
-              exact={item.exact}
-              className="nav-link"
-            >
-              {item.avatar !== undefined
-              ?
-                <img
-                  src={item.avatar}
-                  onError={checkErrorImage}
-                  alt="avatar"
-                  className="user-pic"
-                />
-              :
-                ''
-              }
-              {item.label}
-            </NavLink>
-          </li>
-        ))
-      }
+        <li key={item.key} className="nav-item">
+          <NavLink
+            to={item.link}
+            exact={item.exact}
+            className="nav-link"
+          >
+            {item.avatar !== undefined
+            ?
+              <img
+                src={item.avatar}
+                onError={checkErrorImage}
+                alt="avatar"
+                className="user-pic"
+              />
+            :
+              ''
+            }
+            {item.label}
+          </NavLink>
+        </li>
+      ))}
     </NavbarWrapper>
   );
 }

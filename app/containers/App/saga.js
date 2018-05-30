@@ -3,7 +3,7 @@ import { apiGetInfoUser, dataUserToken } from 'utils/api';
 import { GET_USER } from './constants';
 
 function* getUser() {
-  if(dataUserToken) {
+  if (dataUserToken) {
     const userInfo = yield call(apiGetInfoUser);
     yield put({
       type: GET_USER,
