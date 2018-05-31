@@ -13,6 +13,30 @@ const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
+// =====================================================================
+// var mongoose = require('mongoose'),
+// Task = require('./api/models/todoListModel'), //created model loading here
+// bodyParser = require('body-parser');
+// // mongoose.Promise = global.Promise;
+// mongoose.connect('mongodb://localhost/Tododb');
+
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// var routes = require('./api/routes/todoListRoutes'); //importing route
+// routes(app);
+
+// app.get('/api/user', (req, res) => {
+//   res.json({ get: 'Hello From Express.' });
+// });
+// =====================================================================
+// app.post('/api/user', (req, res) => {
+//   res.json({ post: 'Hello From Express.' });
+// });
+
+// app.post('/Hello', function (req, res) {
+//   res.send('hello world')
+// })
+// =====================================================================
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
@@ -25,6 +49,7 @@ const customHost = argv.host || process.env.HOST;
 const host = customHost || null; // Let http.Server use its default IPv6/4 host
 const prettyHost = customHost || 'localhost';
 
+// =====================================================================
 // Start your app.
 app.listen(port, host, (err) => {
   if (err) {
