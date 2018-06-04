@@ -26,15 +26,15 @@ function* getUser() {
   //     console.log(res.json());
   // });
 
- // const data2 = axios({
- //    method: 'POST',
- //    url: apiUrl,
- //    headers: {
- //        'Content-Type': 'application/json',
- //        'Accept': 'application/json',
- //    },
- //    data: JSON.stringify({query}),
- //  })
+  // const data2 = axios({
+  //    method: 'POST',
+  //    url: apiUrl,
+  //    headers: {
+  //        'Content-Type': 'application/json',
+  //        'Accept': 'application/json',
+  //    },
+  //    data: JSON.stringify({query}),
+  //  })
 
   if (dataUserToken) {
     const userInfo = yield call(apiGetInfoUser);
